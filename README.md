@@ -96,15 +96,25 @@ demo.py        the full flow, measurement to money
 docs/ARCHITECTURE.md
 ```
 
-## Status and roadmap
+## What's in v0.2 (still zero-dependency)
 
-Working concept prototype.
+| Capability | Where | Notes |
+|---|---|---|
+| **Financing engine** | `groundtruth/finance.py` | The full waterfall: advance at T+1 per the reliability curve, holdback as the bank's buffer, interest on actual days outstanding, platform fee, treasury deductions absorbed by the holdback first, conservation enforced. Bank yield and contractor all-in cost computed and tested. |
+| **Reliability scoring** | `groundtruth/reliability.py` | Settled history → score → advance rate. Monotone curve; disputes hurt 2.5× more than cleans help (banks are asymmetric); score clamped [0.50, 0.99]. **The flywheel is code, not a slide.** |
+| **Advance-rate curve** | `finance.py::ADVANCE_CURVE` | 0.80→50% … 0.98→85%; below 0.80 the instrument is not financeable. Step-shaped on purpose — it's a credit-committee artifact. |
+| **Dual-key certificates** | `groundtruth/models.py` | Machine evidence + engineer signature; geo-fencing rejects remote captures before any human sees them; chained ledger breaks visibly at any edited entry. |
+| **CLI** | `python -m groundtruth` | `demo`, `curve`, `finance --invoice … --score … --days …`, `compare` (GroundTruth vs status quo for any invoice). |
+| **Three-invoice demo** | `demo.py` | Invoice 1: full pipeline. Invoice 2: a treasury deduction absorbed by the holdback. Invoice 3: clean history raises the score and the advance rate steps up — the moat, live. |
+| **Test suite** | `tests/` | 22 tests: geo-fence, dual-key, tamper detection, waterfall arithmetic & conservation, deduction absorption, curve monotonicity, flywheel movement. `python -m unittest discover tests` |
+| **Financial model doc** | `docs/FINANCIAL_MODEL.md` | Formulas, worked example, unit economics for all three parties, risk register. |
 
-- [x] Dual-key certificate, geo-checked evidence, chained ledger, receivable discounting, public map
+## Roadmap
+
 - [ ] Real vision takeoff (photogrammetry against SoR items) with calibrated confidence
-- [ ] Ed25519 signatures and engineer key registry
+- [ ] Ed25519 signatures and engineer key registry (the construction exists in the sibling [Surety](https://github.com/Bahniman/surety) project)
 - [ ] PFMS/e-MB integration adapter (the existing government rail)
-- [ ] Financier API: query and bid on certified receivables
+- [ ] Financier API: query and bid on certified receivables (TReDS pattern)
 - [ ] Second vertical: insurance claim attestation with the identical primitive
 
 ## License
