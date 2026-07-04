@@ -14,6 +14,22 @@ When a contractor builds a government road in India, an engineer measures the fi
 
 The bigger idea: this same pattern — *a machine observes, an accountable person signs, money moves* — is the bottleneck in insurance (someone must inspect the damage), banking (someone must verify the collateral), and carbon markets (someone must confirm the project is real). Verification is the last thing still done by a human with a clipboard.
 
+## The business, concretely
+
+Today the contractor submits work details and then waits months for human verification, processing, and payment. GroundTruth changes what the submission *produces*: a **verified, bank-grade e-invoice** — evidence-backed, engineer-signed, tamper-proof. Then the money moves like this:
+
+1. **Day 0:** contractor submits; AI cross-checks the evidence; the engineer signs; a verified e-invoice is issued.
+2. **Day 1, next morning:** the partner bank validates the instrument's authenticity and **advances 60% of the contracted amount** directly to the contractor, per standing agreement.
+3. **The 40% holdback** stays with the bank as its safety net against verification error, disputes, or treasury deductions.
+4. **Whenever the treasury pays** (months later), the bank — which now holds a verified receivable from a payer that never defaults, only delays — collects 100%.
+5. **The bank releases the balance** minus financing charges (interest on the advance for the actual period + a platform fee).
+
+Worked example on a ₹18.6 lakh invoice: contractor receives ₹11.2 lakh on day 1 and ₹6.9 lakh at settlement — **~97% of invoice value, with liquidity on day 1** — versus ~91% after months of 22% informal borrowing today. The contractor's crew and capital move to the next project immediately; the bank earns near-sovereign yield on a self-liquidating instrument.
+
+**The flywheel that makes it a moat:** the 40% holdback is priced verification risk. Every invoice that settles cleanly is actuarial history; as the model's dispute rate falls, banks can safely advance more — 60% → 75% → 85%. A competitor can copy the app; they cannot copy the settled-invoice history that lets a bank trust an 85% advance.
+
+**Revenue:** platform fee per verified invoice + basis points on financed value + the reliability-score data layer banks underwrite against.
+
 <details>
 <summary><b>Jargon decoder</b> (click to expand)</summary>
 
