@@ -2,6 +2,35 @@
 
 **The verification rail for the physical economy.**
 
+### ▶ Try the live demo (no installation): https://bahniman.github.io/groundtruth.html
+
+---
+
+## In plain English (no jargon)
+
+When a contractor builds a government road in India, an engineer measures the finished work **by hand, in a paper register**, and the contractor then waits 6 to 18 months to get paid while that register slowly crawls through approvals. Meanwhile the contractor is often borrowing money at 18–24% just to survive the wait.
+
+**GroundTruth replaces the paper register.** Photos and AI measure the work; the engineer checks and signs it digitally; and that signed record is solid enough for a bank to pay the contractor **within two days** (the bank then collects from the government later). A road that pays for itself as it's built.
+
+The bigger idea: this same pattern — *a machine observes, an accountable person signs, money moves* — is the bottleneck in insurance (someone must inspect the damage), banking (someone must verify the collateral), and carbon markets (someone must confirm the project is real). Verification is the last thing still done by a human with a clipboard.
+
+<details>
+<summary><b>Jargon decoder</b> (click to expand)</summary>
+
+| Term | What it actually means |
+|---|---|
+| **Measurement Book** | The physical register where a government engineer hand-writes how much work was done. Every payment depends on it. |
+| **Evidence** | Geotagged photos/drone captures — proof with the location and time baked in. |
+| **Dual-key certificate** | Two locks on one door: the AI's evidence *and* the human's signature. Neither alone can release money. |
+| **Receivable** | Money someone owes you. Here, what the government owes the contractor for certified work. |
+| **Discounting** | A bank pays you ~98–99% of that money *today* and collects the full amount later; you get cash now. |
+| **Ledger** | The running record of certified work. *Tamper-evident* means editing any entry visibly breaks the record. |
+| **Schedule of Rates (SoR)** | The government's official price list per unit of work (e.g. ₹1,450 per metre of road). |
+
+</details>
+
+---
+
 Software runs at digital speed until it touches the physical world. There, trust still moves at the speed of a human with a clipboard: the site engineer measuring a road, the loss adjuster visiting a claim, the bank officer auditing warehouse stock. Verification is the last analog industry, and it quietly blocks enormous amounts of money:
 
 | Industry | Where verification blocks the money |
