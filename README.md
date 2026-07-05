@@ -2,6 +2,8 @@
 
 **The verification rail for the physical economy.**
 
+> **Part of [Realium](https://realium-core.lovable.app)** — GroundTruth is the *Evidence* and *Liquidity* layers of the Realium platform (its *Authority* layer is the sibling [Surety](https://github.com/Bahniman/surety) engine). Built for ReEnvision 5.0.
+
 ### ▶ Try the live demo (no installation): https://bahniman.github.io/groundtruth.html
 
 ---
